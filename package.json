@@ -1,0 +1,28 @@
+{
+  "name": "wolong-cement-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "db-migrate": "^1.0.0-beta.16",
+    "db-migrate-pg": "^1.2.2",
+    "express": "^4.17.1",
+    "pg-promise": "^10.11.0",
+    "randomstring": "^1.2.1",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "dev": "nodemon --inspect=0.0.0.0:9229 index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ."
+  },
+  "author": "Shanghai Xiaoxin Information Technology Co., Ltd.",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "nodemon": "^2.0.12"
+  }
+}

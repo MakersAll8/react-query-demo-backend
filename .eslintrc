@@ -1,0 +1,133 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended"
+  ],
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2018
+  },
+  "parser": "babel-eslint",
+  "plugins": [
+    "node",
+    "jest"
+  ],
+  "rules": {
+    "space-before-function-paren": [
+      "warn",
+      "always"
+    ],
+    "func-call-spacing": [
+      "warn",
+      "never"
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
+    "arrow-parens": [
+      "error",
+      "as-needed"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "never"
+    ],
+    "no-whitespace-before-property": "error",
+    "jsx-quotes": [
+      "error",
+      "prefer-double"
+    ],
+    "indent": [
+      "error",
+      2, {
+        "ignoredNodes": ["TemplateLiteral"]}
+    ],
+    "no-spaced-func": 2,
+    "no-trailing-spaces": [
+      2,
+      {
+        "skipBlankLines": true
+      }
+    ],
+    "no-multiple-empty-lines": [
+      2,
+      {
+        "max": 1,
+        "maxEOF": 1
+      }
+    ],
+    "space-before-blocks": [
+      2,
+      "always"
+    ],
+    "keyword-spacing": [
+      "error"
+    ],
+    "space-infix-ops": 2,
+    "spaced-comment": [
+      2,
+      "always"
+    ],
+    "block-spacing": [
+      2,
+      "always"
+    ],
+    "brace-style": [
+      2,
+      "1tbs",
+      {
+        "allowSingleLine": false
+      }
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "comma-spacing": [
+      "error",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "semi": "error",
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": {
+          "multiline": true,
+          "minProperties": 4
+        },
+        "ObjectPattern": {
+          "multiline": false
+        },
+        "ExportDeclaration": {
+          "multiline": true
+        }
+      }
+    ],
+    "prefer-const": [
+      "error"
+    ],
+    "max-depth": [
+      "error",
+      4
+    ]
+  },
+  "globals": {
+    "module": "readonly"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest/globals": true
+  }
+}

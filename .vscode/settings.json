@@ -1,0 +1,15 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.exclude": {
+    "**/.git": true, // this is a default value
+    "**/.DS_Store": true, // this is a default value
+    "**/logs": true,
+    "**/dist": true,
+    "**/node_modules": true, // this excludes all folders
+    "node_modules": true // this excludes the folder
+  },
+  "files.eol": "\n"
+}
