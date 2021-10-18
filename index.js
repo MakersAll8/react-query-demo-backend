@@ -6,14 +6,14 @@ const DBMigrate = require('db-migrate');
 const { citiesRouter } = require('./routes');
 
 // run migration scripts
-(async()=>{
+(async () => {
   const dbm = DBMigrate.getInstance(true);
   try {
-    console.log('starting migration')
+    console.log('starting migration');
     await dbm.up();
-    console.log('completed migration')
-  } catch (e){
-    console.log(e)
+    console.log('completed migration');
+  } catch (e) {
+    console.log(e);
   }
 })();
 
@@ -48,10 +48,16 @@ app.get('/', (req, res) => {
 });
 
 app.use('/error', (req, res, next) => {
-  res.status(400).send({errors: [
-    {id:'fp.error.2', values: {count: 100, dollar: 500},  message: 'lorem ipsum 0'}, 
-    {id:'fp.error.2', message: 'lorem ipsum 1'}
-  ]});
+  res.status(400).send({
+    errors: [
+      {
+        id: 'fp.error.2',
+        values: { count: 100, dollar: 500 },
+        message: 'lorem ipsum 0',
+      },
+      { id: 'fp.error.2', message: 'lorem ipsum 1' },
+    ],
+  });
 });
 
 app.use('/cities', citiesRouter);
@@ -61,6 +67,13 @@ app.use(function (err, req, res, next) {
   console.log(`default error handler invoked. Error: ${err}`);
   res.status(400).send(err.message);
 });
+
+// process.on('unhandledRejection', (e) => {
+//   console.log(e);
+// });
+// process.on('uncaughtException', (e) => {
+//   console.log(e);
+// });
 
 // Route handlers
 // var cb0 = function (req, res, next) {
